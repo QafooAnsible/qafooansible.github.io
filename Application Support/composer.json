@@ -1,0 +1,7 @@
+{
+    "name": "QafooAnsible Satis",
+    "require": {
+        "composer/satis": "dev-master",
+        "composer/composer": "1.0.*@dev"
+    }
+}

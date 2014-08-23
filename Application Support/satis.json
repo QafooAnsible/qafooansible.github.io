@@ -1,0 +1,9 @@
+{
+    "name": "QafooAnsible",
+    "homepage": "http://qafooansible.github.io",
+    "repositories": [
+        { "type": "vcs", "url": "http://github.com/qafooansible/installer" },
+        { "type": "vcs", "url": "http://github.com/qafooansible/git" }
+    ],
+    "require-all": true
+}
