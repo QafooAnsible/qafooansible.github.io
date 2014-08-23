@@ -10,5 +10,7 @@
             "type": "vcs",
             "url": "https:\/\/github.com\/QafooAnsible\/git"
         }
-    ]
+    ],
+    "require-all": true,
+    "twig-template": "Template\/index.html.twig"
 }
