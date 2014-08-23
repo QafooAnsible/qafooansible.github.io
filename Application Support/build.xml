@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="QafooAnsible Satis" default="build" basedir=".">
-    <target name="build" depends="update-satis-json,
-                                  update-satis" />
+<project name="QafooAnsible Satis" default="deploy" basedir=".">
+    <target name="deploy" depends="update-satis-json,
+                                  update-satis,
+                                  commit-updates" />
 
     <target name="update-satis">
         <exec executable="php">
@@ -16,6 +17,30 @@
         <exec executable="php">
             <arg value="${basedir}/updateSatisJson.php" />
             <arg value="${basedir}/satis.json" />
+        </exec>
+    </target>
+
+    <target name="commit-updates">
+        <exec executable="git">
+            <arg value="add" />
+            <arg value="${basedir}/../" />
+        </exec>
+
+        <exec executable="git">
+            <arg value="add" />
+            <arg value="-u" />
+        </exec>
+
+        <exec executable="git">
+            <arg value="commit" />
+            <arg value="-m" />
+            <arg value="Updated satis using auto deployment" />
+        </exec>
+    </target>
+
+    <target name="push-updates">
+        <exec executable="git">
+            <arg value="push" />
         </exec>
     </target>
 </project>
