@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="QafooAnsible Satis" default="build" basedir="../">
-    <target name="build" depends="update-satis">
-    </target>
+<project name="QafooAnsible Satis" default="build" basedir=".">
+    <target name="build" depends="update-satis-json,
+                                  update-satis" />
 
     <target name="update-satis">
         <exec executable="php">
-            <arg value="${basedir}/Application Support/satis/bin/satis" />
+            <arg value="${basedir}/vendor/bin/satis" />
             <arg value="build" />
-            <arg value="${basedir}/Configuration/composer.json" />
-            <arg value="${basedir}/" />
+            <arg value="${basedir}/satis.json" />
+            <arg value="${basedir}/../" />
+        </exec>
+    </target>
+
+    <target name="update-satis-json">
+        <exec executable="php">
+            <arg value="${basedir}/updateSatisJson.php" />
+            <arg value="${basedir}/satis.json" />
         </exec>
     </target>
 </project>
