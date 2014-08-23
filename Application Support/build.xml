@@ -2,7 +2,8 @@
 <project name="QafooAnsible Satis" default="deploy" basedir=".">
     <target name="deploy" depends="update-satis-json,
                                   update-satis,
-                                  commit-updates" />
+                                  commit-updates,
+                                  push-updates" />
 
     <target name="update-satis">
         <exec executable="php">
