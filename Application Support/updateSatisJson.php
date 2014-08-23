@@ -48,7 +48,9 @@ $satisRepositories = array_map(function($repository) {
 $satisConfiguration = array(
     "name" => "QafooAnsible",
     "homepage" => "http://qafooansible.github.io",
-    "repositories" => $satisRepositories
+    "repositories" => $satisRepositories,
+    "require-all" => true,
+    "twig-template" => "Template/index.html.twig"
 );
 
 file_put_contents(
