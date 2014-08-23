@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Qafoo Ansible - Composer managed Ansible Roles</title>
+    <style type="text/css">
+    {% include 'styles.css' %}
+    </style>
+</head>
+<body>
+
+    <div id="doc" class="yui-t7">
+        <div id="hd">
+            <h1>Qafoo Ansible</h1>
+            <h2>Composer managed Ansible Roles</h2>
+            <p>
+                <b>QafooAnsible</b> is a composer repository, containing all
+                kinds of different <a href="http://docs.ansible.com/">ansible roles</a>.
+                Each role is supposed to handle a certain use case. There are
+                very simple roles, which simply ensure a certain package is
+                installed, like <em>Git</em>. Other roles exist, which allow for
+                more complex configuration, like <em>npm</em>, which allows for
+                an installation of node packages using the <a href="http://npmjs.org">npm</a>
+                package manager.
+            </p>
+            <div id="lastupdate">
+                Last updated: <time datetime="{{ "now"|date(constant('\DateTime::ISO8601')) }}">{{ "now"|date(constant('\DateTime::RSS')) }}</time>
+            </div>
+
+            <h3>Why composer?</h3>
+            <p>
+                Composer is mostly known as the way of managing <a href="http://php.net">PHP</a>
+                packages. It is however flexible enough to support specialized installers, which
+                may be written to support different scenarios. We have exactly done this for the
+                use case of ansible roles. By reusing a package manager like composer, we don't
+                need to think about dependency management or version maintenance, but are able
+                to concentrate on the import things: Ansible Roles.
+            </p>
+
+            <h3>Using QafooAnsible</h3>
+            <p>
+                In order to use QafooAnsible Roles, just put a <code>composer.json</code> file
+                into the ansible automation directory of your project, specifying all needed
+                roles. The following file may be used as a template:
+<pre><code>{
+    "repositories": [
+        {
+            "packagist": false
+        },
+        {
+            "type": "composer",
+            "url": "{{ url }}"
+        }
+    ],
+    "require": {
+        "qafooansible/some-role": "dev-master",
+        "qafooansible/another-role": "dev-master",
+        ...
+    },
+}</code></pre>
+
+            <h3>Warning: Experimental</h3>
+            <p>
+                The QafooAnsible Repository is considered <b>highly experimental</b> at this
+                moment in time.
+
+                Even though it is used by us in productive enviroments, it currently is limited
+                for example to the Ubuntu platform. However we are always happy to receive pull
+                request for our roles, which integrate compatibility layers for other operating
+                systems.
+            </p>
+
+            <h3>Supporting QafooAnsible Development</h3>
+            <p>
+                Pull requests on any of the <a
+                href="http://github.com/QafooAnsible">QafooAnsible</a>
+                repositories on github are always welcome.
+
+                New roles are of course welcome as well. Just create
+                a repository on github containing a new role. After that drop
+                as a line. We will then happily fork your role into our
+                organization for anybody to use.
+                
+                The <a href="http://github.com/QafooAnsible/bootstrap-role">bootstrap-role</a>
+                repository contains a basic Template for a basic role, as
+                it should be created. Simply create a new new
+            </p>
+        </div>
+        <h2>Package repository contens:</h2>
+        <div id="bd">
+            <div class="yui-g">
+
+                Filter by package name:
+                <input type="text" id="search" autocomplete="off" autofocus />
+
+                {% for name, package in packages %}
+                    <div>
+                        <h3 id="{{ package.highest.name }}">{{ package.highest.name }}</h3>
+                        {% if package.highest.description %}
+                            <p>{{ package.highest.description }}</p>
+                        {% endif %}
+                        <table>
+                            {% if package.highest.homepage %}
+                                <tr>
+                                    <th>Homepage</th>
+                                    <td><a href="{{ package.highest.homepage }}">{{ package.highest.homepage }}</a></td>
+                                </tr>
+                            {% endif %}
+                            {% if package.highest.license %}
+                                <tr>
+                                    <th>License</th>
+                                    <td>{{ package.highest.license|join(', ') }}</td>
+                                </tr>
+                            {% endif %}
+                            {% if package.highest.authors %}
+                                <tr>
+                                    <th>Authors</th>
+                                    <td>
+                                        {% for author in package.highest.authors %}
+                                            {%- if author.homepage -%}
+                                                <a href="{{ author.homepage }}">{{ author.name }}</a>
+                                            {%- else -%}
+                                                {{ author.name }}
+                                            {%- endif -%}
+                                            {%- if not loop.last -%}, {% endif -%}
+                                        {% endfor %}
+                                    </td>
+                                </tr>
+                            {% endif %}
+                            {% if package.highest.support %}
+                            <tr>
+                                <th>Support</th>
+                                <td>
+                                    <ul>
+                                    {% for support_type, support_url in package.highest.support %}
+                                        <li>{{ support_type|capitalize }}: <a href="{{ support_url }}">{{ support_url }}</a></li>
+                                    {% endfor %}
+                                    </ul>
+                                </tr>
+                            </td>
+                            {% endif %}
+                            <tr>
+                                <th>Releases</th>
+                                <td>
+                                    {% for version in package.versions %}
+                                        {%- if version.distType -%}
+                                            <a href="{{ version.distUrl }}" title="{{ version.distReference }}">{{ version.prettyVersion }}</a>
+                                        {%- else -%}
+                                            <a href="{{ version.sourceUrl }}" title="{{ version.sourceReference }}">{{ version.prettyVersion }}</a>
+                                        {%- endif -%}
+                                        {%- if not loop.last -%}, {% endif -%}
+                                    {% endfor %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Required by</th>
+                                <td>
+                                    {% set package_dependencies = attribute(dependencies, name) %}
+                                    {% if package_dependencies|length %}
+                                        <ul>
+                                            {% for dependency in package_dependencies %}
+                                                <li><a href="#{{ dependency }}">{{ dependency }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="ft">
+            <p><small>This Composer Repository is proudly powered by <a href="https://github.com/composer/satis">Satis</a> {{ constant('Composer\\Satis\\Satis::VERSION') }} - Last updated:  {{ "now"|date(constant('\DateTime::ISO8601')) }}</small></p>
+        </div>
+    </div>
+
+    <script>
+    {% include 'jquery-2.0.0.js' %}
+    {% include 'moment-2.4.0.js' %}
+    $(function(){
+        var packages = $('h3');
+        var timer;
+        $('input#search').keyup(function(){
+            clearTimeout(timer);
+            var ms = 350; // milliseconds
+            var needle = $(this).val().toLowerCase(), show;
+            timer = setTimeout(function() {
+                packages.each(function(){
+                    show = $(this).text().toLowerCase().indexOf(needle) != -1;
+                    $(this).parent().toggle(show);
+                });
+            }, ms);
+        }).focus();
+        $('input#search').change(function(){
+            window.location.hash = "!/" + $(this).val().toLowerCase();
+        });
+        $(window).on("hashchange", function() {
+            var $input = $('input#search');
+            if (window.location.hash.indexOf("#!/") == 0) {
+                $input.val(window.location.hash.replace(/#!\//,"").toLowerCase());
+                $input.trigger("keyup");
+            } else {
+                var $anchor = $("h3[id='"+window.location.hash.replace(/^#/,"")+"']");
+                if ($anchor.length != $anchor.filter(":visible").length) {
+                    $input.val("").trigger("keyup");
+                    $anchor.get(0).scrollIntoView();
+                }
+            }
+        });
+        $(window).trigger("hashchange");
+        var $lastUpdate = $('#lastupdate time');
+        function updateDate() {
+            $lastUpdate.text(moment('{{ "now"|date(constant('\DateTime::ISO8601')) }}').fromNow());
+        }
+        setInterval(updateDate, 5000);
+        updateDate();
+    });
+    </script>
+</body>
+</html>
