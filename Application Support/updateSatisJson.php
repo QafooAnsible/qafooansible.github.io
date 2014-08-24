@@ -1,9 +1,9 @@
 <?php
 $blacklist = array(
-    "QafooAnsible/qafooansible.github.io" => true
+    "QafooGalaxy/qafoogalaxy.github.io" => true
 );
 
-$githubUrl = "https://api.github.com/orgs/QafooAnsible/repos";
+$githubUrl = "https://api.github.com/orgs/QafooGalaxy/repos";
 
 $responseBody = file_get_contents(
     $githubUrl,
@@ -14,7 +14,7 @@ $responseBody = file_get_contents(
                 "method" => "GET",
                 "header" => array(
                     "Accept: application/vnd.github.v3+json",
-                    "User-Agent: QafooAnsible Satis Updater"
+                    "User-Agent: QafooGalaxy Satis Updater"
                 )
             )
         )
@@ -47,7 +47,7 @@ $satisRepositories = array_map(function($repository) {
 
 $satisConfiguration = array(
     "name" => "QafooAnsible",
-    "homepage" => "http://qafooansible.github.io",
+    "homepage" => "http://qafoogalaxy.github.io",
     "repositories" => $satisRepositories,
     "require-all" => true,
     "twig-template" => "template/index.html.twig"

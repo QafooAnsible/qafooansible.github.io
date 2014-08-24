@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex,nofollow"/>
-    <title>QafooAnsible - Composer managed Ansible Roles</title>
+    <title>Qafoo Galaxy - Curated Ansible Roles</title>
 
     <style type="text/css">
         {% include 'bootstrap.min.css' %}
@@ -137,13 +137,13 @@
 <div class="segment-1">
     <div class="container">
         <div class="page-header">
-            <h1>QafooAnsible
-                <small>Composer managed Ansible Roles</small>
+            <h1>Qafoo Galaxy
+                <small>Curated Ansible Roles</small>
             </h1>
         </div>
 
         <p class="lead">
-            QafooAnsible is a set of <a href="http://docs.ansible.com/">Ansible
+            <em>Qafoo Galaxy</em> is a set of curated <a href="http://docs.ansible.com/">Ansible
                 roles</a>, which are managed by composer for easy reuse and
             maintanance.
         </p>
@@ -152,7 +152,7 @@
             <h4>Project Structure</h4>
             <p>
                 Each Role is contained within its own git repository inside the
-                QafooAnsible github organization. There are very simple roles,
+                <code>QafooGalaxy</code> github organization. There are very simple roles,
                 which simply ensure a certain package is installed, like
                 <em>Git</em>. Other roles exist, which allow for more complex
                 configuration, like <em>npm</em>, which allows for an
@@ -177,9 +177,9 @@
             to concentrate on the import things: Ansible Roles.
         </p>
 
-        <h2>Using QafooAnsible</h2>
+        <h2>Using Qafoo Galaxy</h2>
         <p>
-            In order to use QafooAnsible Roles, just put a
+            In order to use Qafoo Galaxy Roles, just put a
             <code>composer.json</code> file
             into the ansible automation directory of your project, specifying
             all needed
@@ -196,8 +196,8 @@
         ],
 
         "require": {
-            "qafooansible/some-role": "dev-master",
-            "qafooansible/another-role": "dev-master",
+            "qafoogalaxy/some-role": "dev-master",
+            "qafoogalaxy/another-role": "dev-master",
             ...
         }
     }</pre>
@@ -205,7 +205,7 @@
         <div class="bs-callout bs-callout-warning">
             <h4>Warning: Experimental</h4>
             <p>
-                The QafooAnsible Repository is considered <b>highly
+                The Qafoo Galaxy Repository is considered <b>highly
                     experimental</b> at this
                 moment in time.
 
@@ -219,10 +219,10 @@
             </p>
         </div>
 
-        <h2>Supporting QafooAnsible Development</h2>
+        <h2>Supporting Qafoo Galaxy Development</h2>
         <p>
             Pull requests on any of the <a
-                    href="http://github.com/QafooAnsible">QafooAnsible</a>
+                    href="http://github.com/QafooGalaxy">Qafoo Galaxy</a>
             repositories on github are always welcome.
 
             New roles are of course welcome as well. Just create
@@ -230,7 +230,7 @@
             as a line. We will then happily fork your role into our
             organization for anybody to use.
 
-            The <a href="http://github.com/QafooAnsible/bootstrap-role">bootstrap-role</a>
+            The <a href="http://github.com/QafooGalaxy/bootstrap-role">bootstrap-role</a>
             repository contains a basic Template for a basic role, as
             it should be created. Simply create a new new
         </p>
