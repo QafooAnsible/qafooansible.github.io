@@ -1,0 +1,92 @@
+{
+    "packages": {
+        "qafoogalaxy/git": {
+            "dev-master": {
+                "name": "qafoogalaxy/git",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/git.git",
+                    "reference": "71b2a6d4a2752724ffd75d6cc3b0240049116f59"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/git/zipball/71b2a6d4a2752724ffd75d6cc3b0240049116f59",
+                    "reference": "71b2a6d4a2752724ffd75d6cc3b0240049116f59",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "dev-master"
+                },
+                "time": "2014-08-24 17:44:25",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/git/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/git/issues"
+                }
+            }
+        },
+        "qafoogalaxy/installer": {
+            "dev-master": {
+                "name": "qafoogalaxy/installer",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/installer.git",
+                    "reference": "966e83aa717cee710bd3c06f2191dccfc67f8c6e"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/installer/zipball/966e83aa717cee710bd3c06f2191dccfc67f8c6e",
+                    "reference": "966e83aa717cee710bd3c06f2191dccfc67f8c6e",
+                    "shasum": ""
+                },
+                "require-dev": {
+                    "composer/composer": "1.0.*@dev",
+                    "phpunit/phpunit": "3.7.*"
+                },
+                "time": "2014-08-24 17:44:41",
+                "type": "composer-installer",
+                "extra": {
+                    "class": "QafooLabs\\Composer\\AnsibleInstaller"
+                },
+                "autoload": {
+                    "psr-0": {
+                        "QafooLabs\\Composer\\": "src/"
+                    }
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Kyle Robinson Young",
+                        "email": "kyle@dontkry.com",
+                        "homepage": "https://github.com/shama"
+                    },
+                    {
+                        "name": "Jakob Westhoff",
+                        "email": "jakob@qafoo.com",
+                        "homepage": "https://github.com/jakobwesthoff"
+                    },
+                    {
+                        "name": "Benjamin Eberlei",
+                        "email": "benjamin@qafoo.com",
+                        "homepage": "https://github.com/beberlei"
+                    }
+                ],
+                "description": "Installer for ansible roles",
+                "keywords": [
+                    "ansible",
+                    "installer"
+                ],
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/installer/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/installer/issues"
+                }
+            }
+        }
+    }
+}
