@@ -1,14 +1,14 @@
 {
     "name": "QafooAnsible",
-    "homepage": "http:\/\/qafooansible.github.io",
+    "homepage": "http:\/\/qafoogalaxy.github.io",
     "repositories": [
         {
             "type": "vcs",
-            "url": "https:\/\/github.com\/QafooAnsible\/installer"
+            "url": "https:\/\/github.com\/QafooGalaxy\/installer"
         },
         {
             "type": "vcs",
-            "url": "https:\/\/github.com\/QafooAnsible\/git"
+            "url": "https:\/\/github.com\/QafooGalaxy\/git"
         }
     ],
     "require-all": true,
