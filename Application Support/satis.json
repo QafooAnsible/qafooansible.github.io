@@ -12,5 +12,5 @@
         }
     ],
     "require-all": true,
-    "twig-template": "Template\/index.html.twig"
+    "twig-template": "template\/index.html.twig"
 }
