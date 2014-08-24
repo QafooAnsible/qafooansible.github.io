@@ -1,208 +1,362 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="robots" content="noindex,nofollow" />
-    <title>Qafoo Ansible - Composer managed Ansible Roles</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow"/>
+    <title>QafooAnsible - Composer managed Ansible Roles</title>
+
     <style type="text/css">
-    {% include 'styles.css' %}
+        {% include 'bootstrap.min.css' %}
     </style>
+    <style>
+        .container {
+            max-width: 890px;
+        }
+
+        .page-header h1 {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            margin-top: 35px;
+        }
+
+        .lead {
+            margin-top: 18px;
+            margin-bottom: 35px;
+        }
+
+        .segment-1 {
+            background: #ffffff;
+            width: 100%;
+        }
+
+        .segment-2 {
+            background: #f5f5f5;
+            width: 100%;
+            margin-top: 35px;
+        }
+
+        .segment-2 .page-header {
+            margin-top: 20px;
+        }
+
+        .segment-2 .page-header h1 {
+            margin-top: 5px;
+        }
+
+        .dl-horizontal {
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+
+        /*
+         * Callouts
+         *
+         * Not quite alerts, but custom and helpful notes for folks reading the docs.
+         * Requires a base and modifier class.
+         */
+
+        /* Common styles for all types */
+        .bs-callout {
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #eee;
+            border-left-width: 5px;
+            border-radius: 3px;
+        }
+
+        .bs-callout h4 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .bs-callout p:last-child {
+            margin-bottom: 0;
+        }
+
+        .bs-callout code {
+            border-radius: 3px;
+        }
+
+        /* Tighten up space between multiple callouts */
+        .bs-callout + .bs-callout {
+            margin-top: -5px;
+        }
+
+        /* Variations */
+        .bs-callout-danger {
+            border-left-color: #d9534f;
+        }
+
+        .bs-callout-danger h4 {
+            color: #d9534f;
+        }
+
+        .bs-callout-warning {
+            border-left-color: #f0ad4e;
+        }
+
+        .bs-callout-warning h4 {
+            color: #f0ad4e;
+        }
+
+        .bs-callout-info {
+            border-left-color: #5bc0de;
+        }
+
+        .bs-callout-info h4 {
+            color: #5bc0de;
+        }
+
+        .bs-callout-success {
+            border-left-color: #5cb85c;
+        }
+
+        .bs-callout-success h4 {
+            color: #5cb85c;
+        }
+
+        .bs-callout-bg-white {
+            background-color: #ffffff;
+        }
+
+    </style>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
+<div class="segment-1">
+    <div class="container">
+        <div class="page-header">
+            <h1>QafooAnsible
+                <small>Composer managed Ansible Roles</small>
+            </h1>
+        </div>
 
-    <div id="doc" class="yui-t7">
-        <div id="hd">
-            <h1>Qafoo Ansible</h1>
-            <h2>Composer managed Ansible Roles</h2>
+        <p class="lead">
+            QafooAnsible is a set of <a href="http://docs.ansible.com/">Ansible
+                roles</a>, which are managed by composer for easy reuse and
+            maintanance.
+        </p>
+
+        <div class="bs-callout bs-callout-info">
+            <h4>Project Structure</h4>
             <p>
-                <b>QafooAnsible</b> is a composer repository, containing all
-                kinds of different <a href="http://docs.ansible.com/">ansible roles</a>.
-                Each role is supposed to handle a certain use case. There are
-                very simple roles, which simply ensure a certain package is
-                installed, like <em>Git</em>. Other roles exist, which allow for
-                more complex configuration, like <em>npm</em>, which allows for
-                an installation of node packages using the <a href="http://npmjs.org">npm</a>
+                Each Role is contained within its own git repository inside the
+                QafooAnsible github organization. There are very simple roles,
+                which simply ensure a certain package is installed, like
+                <em>Git</em>. Other roles exist, which allow for more complex
+                configuration, like <em>npm</em>, which allows for an
+                installation
+                of node packages using the <a href="http://npmjs.org">npm</a>
                 package manager.
             </p>
-            <div id="lastupdate">
-                Last updated: <time datetime="{{ "now"|date(constant('\DateTime::ISO8601')) }}">{{ "now"|date(constant('\DateTime::RSS')) }}</time>
-            </div>
+        </div>
 
-            <h3>Why composer?</h3>
-            <p>
-                Composer is mostly known as the way of managing <a href="http://php.net">PHP</a>
-                packages. It is however flexible enough to support specialized installers, which
-                may be written to support different scenarios. We have exactly done this for the
-                use case of ansible roles. By reusing a package manager like composer, we don't
-                need to think about dependency management or version maintenance, but are able
-                to concentrate on the import things: Ansible Roles.
-            </p>
+        <h2>Why composer?</h2>
+        <p>
+            Composer is mostly known as the way of managing <a
+                    href="http://php.net">PHP</a>
+            packages. It is however flexible enough to support specialized
+            installers, which
+            may be written to support different scenarios. We have exactly done
+            this for the
+            use case of ansible roles. By reusing a package manager like
+            composer, we don't
+            need to think about dependency management or version maintenance,
+            but are able
+            to concentrate on the import things: Ansible Roles.
+        </p>
 
-            <h3>Using QafooAnsible</h3>
-            <p>
-                In order to use QafooAnsible Roles, just put a <code>composer.json</code> file
-                into the ansible automation directory of your project, specifying all needed
-                roles. The following file may be used as a template:
-<pre><code>{
-    "repositories": [
-        {
-            "packagist": false
-        },
-        {
-            "type": "composer",
-            "url": "{{ url }}"
+        <h2>Using QafooAnsible</h2>
+        <p>
+            In order to use QafooAnsible Roles, just put a
+            <code>composer.json</code> file
+            into the ansible automation directory of your project, specifying
+            all needed
+            roles. The following file may be used as a template:
+    <pre>{
+        "repositories": [
+            {
+                "packagist": false
+            },
+            {
+                "type": "composer",
+                "url": "{{ url }}"
+            }
+        ],
+
+        "require": {
+            "qafooansible/some-role": "dev-master",
+            "qafooansible/another-role": "dev-master",
+            ...
         }
-    ],
-    "require": {
-        "qafooansible/some-role": "dev-master",
-        "qafooansible/another-role": "dev-master",
-        ...
-    },
-}</code></pre>
+    }</pre>
 
-            <h3>Warning: Experimental</h3>
+        <div class="bs-callout bs-callout-warning">
+            <h4>Warning: Experimental</h4>
             <p>
-                The QafooAnsible Repository is considered <b>highly experimental</b> at this
+                The QafooAnsible Repository is considered <b>highly
+                    experimental</b> at this
                 moment in time.
 
-                Even though it is used by us in productive enviroments, it currently is limited
-                for example to the Ubuntu platform. However we are always happy to receive pull
-                request for our roles, which integrate compatibility layers for other operating
+                Even though it is used by us in productive enviroments, it
+                currently is limited
+                for example to the Ubuntu platform. However we are always happy
+                to receive pull
+                request for our roles, which integrate compatibility layers for
+                other operating
                 systems.
             </p>
-
-            <h3>Supporting QafooAnsible Development</h3>
-            <p>
-                Pull requests on any of the <a
-                href="http://github.com/QafooAnsible">QafooAnsible</a>
-                repositories on github are always welcome.
-
-                New roles are of course welcome as well. Just create
-                a repository on github containing a new role. After that drop
-                as a line. We will then happily fork your role into our
-                organization for anybody to use.
-                
-                The <a href="http://github.com/QafooAnsible/bootstrap-role">bootstrap-role</a>
-                repository contains a basic Template for a basic role, as
-                it should be created. Simply create a new new
-            </p>
         </div>
-        <h2>Package repository contens:</h2>
-        <div id="bd">
-            <div class="yui-g">
 
-                Filter by package name:
-                <input type="text" id="search" autocomplete="off" autofocus />
+        <h2>Supporting QafooAnsible Development</h2>
+        <p>
+            Pull requests on any of the <a
+                    href="http://github.com/QafooAnsible">QafooAnsible</a>
+            repositories on github are always welcome.
 
-                {% for name, package in packages %}
-                    <div>
-                        <h3 id="{{ package.highest.name }}">{{ package.highest.name }}</h3>
-                        {% if package.highest.description %}
-                            <p>{{ package.highest.description }}</p>
-                        {% endif %}
-                        <table>
-                            {% if package.highest.homepage %}
-                                <tr>
-                                    <th>Homepage</th>
-                                    <td><a href="{{ package.highest.homepage }}">{{ package.highest.homepage }}</a></td>
-                                </tr>
-                            {% endif %}
-                            {% if package.highest.license %}
-                                <tr>
-                                    <th>License</th>
-                                    <td>{{ package.highest.license|join(', ') }}</td>
-                                </tr>
-                            {% endif %}
-                            {% if package.highest.authors %}
-                                <tr>
-                                    <th>Authors</th>
-                                    <td>
-                                        {% for author in package.highest.authors %}
-                                            {%- if author.homepage -%}
-                                                <a href="{{ author.homepage }}">{{ author.name }}</a>
-                                            {%- else -%}
-                                                {{ author.name }}
-                                            {%- endif -%}
-                                            {%- if not loop.last -%}, {% endif -%}
-                                        {% endfor %}
-                                    </td>
-                                </tr>
-                            {% endif %}
-                            {% if package.highest.support %}
-                            <tr>
-                                <th>Support</th>
-                                <td>
-                                    <ul>
-                                    {% for support_type, support_url in package.highest.support %}
-                                        <li>{{ support_type|capitalize }}: <a href="{{ support_url }}">{{ support_url }}</a></li>
-                                    {% endfor %}
-                                    </ul>
-                                </tr>
-                            </td>
-                            {% endif %}
-                            <tr>
-                                <th>Releases</th>
-                                <td>
-                                    {% for version in package.versions %}
-                                        {%- if version.distType -%}
-                                            <a href="{{ version.distUrl }}" title="{{ version.distReference }}">{{ version.prettyVersion }}</a>
-                                        {%- else -%}
-                                            <a href="{{ version.sourceUrl }}" title="{{ version.sourceReference }}">{{ version.prettyVersion }}</a>
-                                        {%- endif -%}
-                                        {%- if not loop.last -%}, {% endif -%}
-                                    {% endfor %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Required by</th>
-                                <td>
-                                    {% set package_dependencies = attribute(dependencies, name) %}
-                                    {% if package_dependencies|length %}
-                                        <ul>
-                                            {% for dependency in package_dependencies %}
-                                                <li><a href="#{{ dependency }}">{{ dependency }}</a></li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% endif %}
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-        <div id="ft">
-            <p><small>This Composer Repository is proudly powered by <a href="https://github.com/composer/satis">Satis</a> {{ constant('Composer\\Satis\\Satis::VERSION') }} - Last updated:  {{ "now"|date(constant('\DateTime::ISO8601')) }}</small></p>
-        </div>
+            New roles are of course welcome as well. Just create
+            a repository on github containing a new role. After that drop
+            as a line. We will then happily fork your role into our
+            organization for anybody to use.
+
+            The <a href="http://github.com/QafooAnsible/bootstrap-role">bootstrap-role</a>
+            repository contains a basic Template for a basic role, as
+            it should be created. Simply create a new new
+        </p>
     </div>
+</div>
 
-    <script>
-    {% include 'jquery-2.0.0.js' %}
-    {% include 'moment-2.4.0.js' %}
-    $(function(){
-        var packages = $('h3');
+<div class="segment-2">
+    <div class="container">
+        <div class="page-header">
+            <h1>Browse the Repository</h1>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="search">Search</label>
+            <input type="text" class="form-control" id="search"
+                   placeholder="Search Packages..." autocomplete="off">
+            <span class="help-block">Enter search terms to filter packages stored in this repository.</span>
+        </div>
+
+        {% for name, package in packages %}
+            <div class="bs-callout bs-callout-success bs-callout-bg-white">
+                <h4 class="package-name"
+                    id="{{ package.highest.name }}">{{ package.highest.name }}</h4>
+                {% if package.highest.description %}
+                    <p>{{ package.highest.description }}</p>
+                {% endif %}
+                <dl class="dl-horizontal">
+                    {% if package.highest.homepage %}
+                        <dt>Homepage</dt>
+                        <dd>
+                            <a href="{{ package.highest.homepage }}">{{ package.highest.homepage }}</a>
+                        </dd>
+                    {% endif %}
+                    {% if package.highest.license %}
+                        <dt>License</dt>
+                        <dd>{{ package.highest.license|join(', ') }}</dd>
+                    {% endif %}
+                    {% if package.highest.authors %}
+                        <dt>Authors</dt>
+                        <dd>
+                            {% for author in package.highest.authors %}
+                                {%- if author.homepage -%}
+                                    <a href="{{ author.homepage }}">{{ author.name }}</a>
+                                {%- else -%}
+                                    {{ author.name }}
+                                {%- endif -%}
+                                {%- if not loop.last -%}, {% endif -%}
+                            {% endfor %}
+                        </dd>
+                    {% endif %}
+                    {% if package.highest.support %}
+                        <dt>Support</dt>
+                        <dd>
+                            <ul class="list-unstyled">
+                                {% for support_type, support_url in package.highest.support %}
+                                    <li>{{ support_type|capitalize }}: <a
+                                                href="{{ support_url }}">{{ support_url }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </dd>
+                    {% endif %}
+                    <dt>Releases</dt>
+                    <dd>
+                        {% for version in package.versions %}
+                            {%- if version.distType -%}
+                                <a href="{{ version.distUrl }}"
+                                   title="{{ version.distReference }}">{{ version.prettyVersion }}</a>
+                            {%- else -%}
+                                <a href="{{ version.sourceUrl }}"
+                                   title="{{ version.sourceReference }}">{{ version.prettyVersion }}</a>
+                            {%- endif -%}
+                            {%- if not loop.last -%}, {% endif -%}
+                        {% endfor %}
+                    </dd>
+                    <dt>Required by</dt>
+                    <dd>
+                        {% set package_dependencies = attribute(dependencies, name) %}
+                        {% if package_dependencies|length %}
+                            <ul class="list-unstyled">
+                                {% for dependency in package_dependencies %}
+                                    <li>
+                                        <a href="#{{ dependency }}">{{ dependency }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </dd>
+                </dl>
+            </div>
+        {% endfor %}
+        <p>
+            <small>This Composer Repository is proudly powered by <a
+                        href="https://github.com/composer/satis">Satis</a> {{ constant('Composer\\Satis\\Satis::VERSION') }}
+                - Last
+                updated:  {{ "now"|date(constant('\DateTime::ISO8601')) }}
+            </small>
+        </p>
+    </div>
+</div>
+
+<script>
+    {% include 'jquery-2.1.1.min.js' %}
+    $(function () {
+        var packages = $('h4.package-name');
         var timer;
-        $('input#search').keyup(function(){
+        $('input#search').keyup(function () {
             clearTimeout(timer);
             var ms = 350; // milliseconds
             var needle = $(this).val().toLowerCase(), show;
-            timer = setTimeout(function() {
-                packages.each(function(){
+            timer = setTimeout(function () {
+                packages.each(function () {
                     show = $(this).text().toLowerCase().indexOf(needle) != -1;
                     $(this).parent().toggle(show);
                 });
             }, ms);
         }).focus();
-        $('input#search').change(function(){
+        $('input#search').change(function () {
             window.location.hash = "!/" + $(this).val().toLowerCase();
         });
-        $(window).on("hashchange", function() {
+        $(window).on("hashchange", function () {
             var $input = $('input#search');
             if (window.location.hash.indexOf("#!/") == 0) {
-                $input.val(window.location.hash.replace(/#!\//,"").toLowerCase());
+                $input.val(window.location.hash.replace(/#!\//, "").toLowerCase());
                 $input.trigger("keyup");
             } else {
-                var $anchor = $("h3[id='"+window.location.hash.replace(/^#/,"")+"']");
+                var $anchor = $("h3[id='" + window.location.hash.replace(/^#/, "") + "']");
                 if ($anchor.length != $anchor.filter(":visible").length) {
                     $input.val("").trigger("keyup");
                     $anchor.get(0).scrollIntoView();
@@ -210,13 +364,7 @@
             }
         });
         $(window).trigger("hashchange");
-        var $lastUpdate = $('#lastupdate time');
-        function updateDate() {
-            $lastUpdate.text(moment('{{ "now"|date(constant('\DateTime::ISO8601')) }}').fromNow());
-        }
-        setInterval(updateDate, 5000);
-        updateDate();
     });
-    </script>
+</script>
 </body>
 </html>
