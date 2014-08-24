@@ -50,7 +50,7 @@ $satisConfiguration = array(
     "homepage" => "http://qafooansible.github.io",
     "repositories" => $satisRepositories,
     "require-all" => true,
-    "twig-template" => "Template/index.html.twig"
+    "twig-template" => "template/index.html.twig"
 );
 
 file_put_contents(
