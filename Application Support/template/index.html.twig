@@ -7,9 +7,7 @@
     <meta name="robots" content="noindex,nofollow"/>
     <title>Qafoo Galaxy - Curated Ansible Roles</title>
 
-    <style type="text/css">
-        {% include 'bootstrap.min.css' %}
-    </style>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .container {
             max-width: 890px;
@@ -123,7 +121,6 @@
         .bs-callout-bg-white {
             background-color: #ffffff;
         }
-
     </style>
 
 
@@ -251,7 +248,7 @@
         </div>
 
         {% for name, package in packages %}
-            <div class="bs-callout bs-callout-success bs-callout-bg-white">
+            <div class="bs-callout bs-callout-success bs-callout-bg-white is-shown">
                 <h4 class="package-name"
                     id="{{ package.highest.name }}">{{ package.highest.name }}</h4>
                 {% if package.highest.description %}
@@ -332,8 +329,8 @@
     </div>
 </div>
 
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script>
-    {% include 'jquery-2.1.1.min.js' %}
     $(function () {
         var packages = $('h4.package-name');
         var timer;
