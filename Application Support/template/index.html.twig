@@ -330,6 +330,7 @@
 </div>
 
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js"></script>
 <script>
     $(function () {
         var packages = $('h4.package-name');
@@ -340,8 +341,42 @@
             var needle = $(this).val().toLowerCase(), show;
             timer = setTimeout(function () {
                 packages.each(function () {
-                    show = $(this).text().toLowerCase().indexOf(needle) != -1;
-                    $(this).parent().toggle(show);
+                    var $packageName = $(this);
+                    var $package = $packageName.parent();
+                    show = $packageName.text().toLowerCase().indexOf(needle) != -1;
+                    $package.stop(true, true);
+                    switch(true) {
+                        case show && $package.hasClass("is-shown"):
+                            // Nothing to do
+                        break;
+                        case show && !$package.hasClass("is-shown"):
+                            // Animate in
+                            $package.css({
+                                display: "inherit",
+                                x: "-50px",
+                                opacity: 0
+                            });
+                            $package.transition({
+                                x: 0,
+                                opacity: 1
+                            }, 500, "snap")
+                            .addClass("is-shown");
+                        break;
+                        case !show && !$package.hasClass("is-shown"):
+                            // Nothing to do
+                        break;
+                        case !show && $package.hasClass("is-shown"):
+                            // Animate out
+                            $package.transition({
+                                x: "-50px",
+                                opacity: 0
+                            }, 500, "snap")
+                            .transition({
+                                display: "none"
+                            }, 1)
+                            .removeClass("is-shown");
+                        break;
+                    }
                 });
             }, ms);
         }).focus();
