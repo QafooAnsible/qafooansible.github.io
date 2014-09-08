@@ -371,15 +371,11 @@
                     }
                 });
             }, ms);
-        }).focus();
+        })
         $('input#search').change(function () {
             window.location.hash = "!/" + $(this).val().toLowerCase();
         });
         $(window).on("hashchange", function () {
-            if (window.location.hash === "") {
-                // Do nothing if fragment is empty
-                return
-            }
             var $input = $('input#search');
             if (window.location.hash.indexOf("#!/") == 0) {
                 $input.val(window.location.hash.replace(/#!\//, "").toLowerCase());
@@ -393,6 +389,10 @@
             }
         });
         $(window).trigger("hashchange");
+        // If page is loaded with a hash focus the search field
+        if (window.location.hash.length != 0) {
+            $('input#search').focus();
+        }
     });
 </script>
 </body>
