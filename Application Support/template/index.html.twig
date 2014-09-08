@@ -150,13 +150,10 @@
             <h4>Project Structure</h4>
             <p>
                 Each Role is contained within its own git repository inside the
-                <code>QafooGalaxy</code> github organization. There are very simple roles,
-                which simply ensure a certain package is installed, like
-                <em>Git</em>. Other roles exist, which allow for more complex
-                configuration, like <em>npm</em>, which allows for an
-                installation
-                of node packages using the <a href="http://npmjs.org">npm</a>
-                package manager.
+                <code>QafooGalaxy</code> github organization. There are very
+                simple roles, like ensuring a certain package is installed (eg.
+                <em>Git</em>), as well as more complex roles (eg.
+                <em>npm</em>).
             </p>
         </div>
 
@@ -165,10 +162,9 @@
             Composer is mostly known as the way of managing <a
                     href="http://php.net">PHP</a>
             packages. It is however flexible enough to support specialized
-            installers, which
-            may be written to support different scenarios. We have exactly done
-            this for the
-            use case of ansible roles. By reusing a package manager like
+            installers. Those may be written to accommodate all kinds of
+            different scenarios. We have exactly done
+            this for ansible roles. By reusing a package manager like
             composer, we don't
             need to think about dependency management or version maintenance,
             but are able
@@ -177,11 +173,10 @@
 
         <h2>Using Qafoo Galaxy</h2>
         <p>
-            In order to use Qafoo Galaxy Roles, just put a
-            <code>composer.json</code> file
-            into the ansible automation directory of your project, specifying
-            all needed
-            roles. The following file may be used as a template:
+            In order to use Qafoo Galaxy Roles, just put
+            a <code>composer.json</code> file into the automation directory of
+            your project, specifying all needed roles. The following file
+            serves as a template:
     <pre>{
         "repositories": [
             {
@@ -203,17 +198,13 @@
         <div class="bs-callout bs-callout-warning">
             <h4>Warning: Experimental</h4>
             <p>
-                The Qafoo Galaxy Repository is considered <b>highly
-                    experimental</b> at this
-                moment in time.
+                At this moment the Qafoo Galaxy Repository is considered
+                <b>highly experimental</b>
 
-                Even though it is used by us in productive enviroments, it
-                currently is limited
-                for example to the Ubuntu platform. However we are always happy
-                to receive pull
-                request for our roles, which integrate compatibility layers for
-                other operating
-                systems.
+                Even though it is used by us in productive environments, it is
+                currently limited to the Ubuntu platform. However we are always happy
+                to receive pull request making rules more compatible and
+                versatile.
             </p>
         </div>
 
@@ -223,14 +214,15 @@
                     href="http://github.com/QafooGalaxy">Qafoo Galaxy</a>
             repositories on github are always welcome.
 
-            New roles are of course welcome as well. Just create
-            a repository on github containing a new role. After that drop
-            as a line. We will then happily fork your role into our
-            organization for anybody to use.
+            New roles are welcome as well. Just create a repository on github
+            containing a new role. Drop us a line afterwards. After reviewing
+            your role new role, we will happily fork it into our organization
+            once our quality criteria is met.
 
             The <a href="http://github.com/QafooGalaxy/bootstrap-role">bootstrap-role</a>
-            repository contains a basic Template for a basic role, as
-            it should be created. Simply create a new new
+            repository serves as a template for a basic role. It reflects
+            a good starting point on how a new role should be structured and
+            document.
         </p>
     </div>
 </div>
@@ -384,6 +376,10 @@
             window.location.hash = "!/" + $(this).val().toLowerCase();
         });
         $(window).on("hashchange", function () {
+            if (window.location.hash === "") {
+                // Do nothing if fragment is empty
+                return
+            }
             var $input = $('input#search');
             if (window.location.hash.indexOf("#!/") == 0) {
                 $input.val(window.location.hash.replace(/#!\//, "").toLowerCase());
