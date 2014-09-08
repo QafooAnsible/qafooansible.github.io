@@ -302,7 +302,7 @@
             <small>This Composer Repository is proudly powered by <a
                         href="https://github.com/composer/satis">Satis</a> 1.0.0-dev
                 - Last
-                updated:  2014-09-08T18:11:26+0200
+                updated:  2014-09-08T18:21:00+0200
             </small>
         </p>
     </div>
@@ -358,15 +358,11 @@
                     }
                 });
             }, ms);
-        }).focus();
+        })
         $('input#search').change(function () {
             window.location.hash = "!/" + $(this).val().toLowerCase();
         });
         $(window).on("hashchange", function () {
-            if (window.location.hash === "") {
-                // Do nothing if fragment is empty
-                return
-            }
             var $input = $('input#search');
             if (window.location.hash.indexOf("#!/") == 0) {
                 $input.val(window.location.hash.replace(/#!\//, "").toLowerCase());
@@ -380,6 +376,10 @@
             }
         });
         $(window).trigger("hashchange");
+        // If page is loaded with a hash focus the search field
+        if (window.location.hash.length != 0) {
+            $('input#search').focus();
+        }
     });
 </script>
 </body>
