@@ -1,0 +1,539 @@
+{
+    "packages": {
+        "qafoogalaxy/BashEnvironment": {
+            "dev-master": {
+                "name": "qafoogalaxy/BashEnvironment",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/BashEnvironment.git",
+                    "reference": "7473048a84876ee67cd8d2ee29b8b5b1f31763bb"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/BashEnvironment/zipball/7473048a84876ee67cd8d2ee29b8b5b1f31763bb",
+                    "reference": "7473048a84876ee67cd8d2ee29b8b5b1f31763bb",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "1.0"
+                },
+                "time": "2014-09-19 14:23:17",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/BashEnvironment/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/BashEnvironment/issues"
+                }
+            }
+        },
+        "qafoogalaxy/BootstrapJS": {
+            "dev-master": {
+                "name": "qafoogalaxy/BootstrapJS",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/BootstrapJS.git",
+                    "reference": "0f823d7921b15d9fd9db19e607f4c10f673ec78b"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/BootstrapJS/zipball/0f823d7921b15d9fd9db19e607f4c10f673ec78b",
+                    "reference": "0f823d7921b15d9fd9db19e607f4c10f673ec78b",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/git": "1.0",
+                    "qafoogalaxy/installer": "1.0"
+                },
+                "time": "2014-09-20 10:28:53",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/BootstrapJS/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/BootstrapJS/issues"
+                }
+            }
+        },
+        "qafoogalaxy/CMake": {
+            "dev-master": {
+                "name": "qafoogalaxy/CMake",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/CMake.git",
+                    "reference": "6f315580ea02b7b16b10f10f43c176c33f18defe"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/CMake/zipball/6f315580ea02b7b16b10f10f43c176c33f18defe",
+                    "reference": "6f315580ea02b7b16b10f10f43c176c33f18defe",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "1.0"
+                },
+                "time": "2014-09-19 14:39:23",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/CMake/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/CMake/issues"
+                }
+            }
+        },
+        "qafoogalaxy/CouchDB": {
+            "dev-master": {
+                "name": "qafoogalaxy/CouchDB",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/CouchDB.git",
+                    "reference": "5e2d2b534449373b495d823a00cb1295b93304d9"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/CouchDB/zipball/5e2d2b534449373b495d823a00cb1295b93304d9",
+                    "reference": "5e2d2b534449373b495d823a00cb1295b93304d9",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/buildenvironment": "1.0",
+                    "qafoogalaxy/erlang": "1.0",
+                    "qafoogalaxy/icu": "1.0",
+                    "qafoogalaxy/installer": "1.0",
+                    "qafoogalaxy/spidermonkey": "1.0"
+                },
+                "time": "2014-09-20 10:49:12",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/CouchDB/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/CouchDB/issues"
+                }
+            }
+        },
+        "qafoogalaxy/Elasticsearch": {
+            "dev-master": {
+                "name": "qafoogalaxy/Elasticsearch",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/Elasticsearch.git",
+                    "reference": "f0adce6ac7f5196d62118cf856103cccd5fb00f7"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/Elasticsearch/zipball/f0adce6ac7f5196d62118cf856103cccd5fb00f7",
+                    "reference": "f0adce6ac7f5196d62118cf856103cccd5fb00f7",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "1.0",
+                    "qafoogalaxy/java": "1.0"
+                },
+                "time": "2014-09-19 15:02:15",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/Elasticsearch/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/Elasticsearch/issues"
+                }
+            }
+        },
+        "qafoogalaxy/Emscripten": {
+            "dev-master": {
+                "name": "qafoogalaxy/Emscripten",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/Emscripten.git",
+                    "reference": "2bb0a7d05044fecdc702e37508f97d1d82d27ead"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/Emscripten/zipball/2bb0a7d05044fecdc702e37508f97d1d82d27ead",
+                    "reference": "2bb0a7d05044fecdc702e37508f97d1d82d27ead",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/buildenvironment": "1.0",
+                    "qafoogalaxy/cmake": "1.0",
+                    "qafoogalaxy/git": "1.0",
+                    "qafoogalaxy/installer": "1.0",
+                    "qafoogalaxy/java": "1.0"
+                },
+                "time": "2014-09-20 10:04:08",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/Emscripten/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/Emscripten/issues"
+                }
+            }
+        },
+        "qafoogalaxy/Erlang": {
+            "dev-master": {
+                "name": "qafoogalaxy/Erlang",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/Erlang.git",
+                    "reference": "e656b06d43309fae38cf02cc63cf0942bfbb4aaa"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/Erlang/zipball/e656b06d43309fae38cf02cc63cf0942bfbb4aaa",
+                    "reference": "e656b06d43309fae38cf02cc63cf0942bfbb4aaa",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "1.0"
+                },
+                "time": "2014-09-19 16:10:49",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/Erlang/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/Erlang/issues"
+                }
+            }
+        },
+        "qafoogalaxy/Git": {
+            "dev-master": {
+                "name": "qafoogalaxy/Git",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/Git.git",
+                    "reference": "b473a6b7ad052f8c3280e57b8a68797b98bec281"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/Git/zipball/b473a6b7ad052f8c3280e57b8a68797b98bec281",
+                    "reference": "b473a6b7ad052f8c3280e57b8a68797b98bec281",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "1.0"
+                },
+                "time": "2014-09-19 14:01:18",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/Git/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/Git/issues"
+                }
+            }
+        },
+        "qafoogalaxy/GtkTheme": {
+            "dev-master": {
+                "name": "qafoogalaxy/GtkTheme",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/GtkTheme.git",
+                    "reference": "1b539e6886be673ffa0da384b88db7dd297f5ee1"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/GtkTheme/zipball/1b539e6886be673ffa0da384b88db7dd297f5ee1",
+                    "reference": "1b539e6886be673ffa0da384b88db7dd297f5ee1",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "1.0"
+                },
+                "time": "2014-09-19 16:20:28",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/GtkTheme/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/GtkTheme/issues"
+                }
+            }
+        },
+        "qafoogalaxy/HttpCli": {
+            "dev-master": {
+                "name": "qafoogalaxy/HttpCli",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/HttpCli.git",
+                    "reference": "47cae654349930e5f97e9c4bd1895008cda10468"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/HttpCli/zipball/47cae654349930e5f97e9c4bd1895008cda10468",
+                    "reference": "47cae654349930e5f97e9c4bd1895008cda10468",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "1.0"
+                },
+                "time": "2014-09-19 14:37:07",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/HttpCli/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/HttpCli/issues"
+                }
+            }
+        },
+        "qafoogalaxy/ICU": {
+            "dev-master": {
+                "name": "qafoogalaxy/ICU",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/ICU.git",
+                    "reference": "690c8bb2079bc517a8315af722a63d4da7ba45c8"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/ICU/zipball/690c8bb2079bc517a8315af722a63d4da7ba45c8",
+                    "reference": "690c8bb2079bc517a8315af722a63d4da7ba45c8",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "1.0"
+                },
+                "time": "2014-09-19 16:24:04",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/ICU/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/ICU/issues"
+                }
+            }
+        },
+        "qafoogalaxy/Inkscape": {
+            "dev-master": {
+                "name": "qafoogalaxy/Inkscape",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/Inkscape.git",
+                    "reference": "15cf65bd4c110113f7e735fd46948a025a2153cb"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/Inkscape/zipball/15cf65bd4c110113f7e735fd46948a025a2153cb",
+                    "reference": "15cf65bd4c110113f7e735fd46948a025a2153cb",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "1.0"
+                },
+                "time": "2014-09-19 16:32:39",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/Inkscape/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/Inkscape/issues"
+                }
+            }
+        },
+        "qafoogalaxy/installer": {
+            "1.0": {
+                "name": "qafoogalaxy/installer",
+                "version": "1.0",
+                "version_normalized": "1.0.0.0",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/installer.git",
+                    "reference": "966e83aa717cee710bd3c06f2191dccfc67f8c6e"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/installer/zipball/966e83aa717cee710bd3c06f2191dccfc67f8c6e",
+                    "reference": "966e83aa717cee710bd3c06f2191dccfc67f8c6e",
+                    "shasum": ""
+                },
+                "require-dev": {
+                    "composer/composer": "1.0.*@dev",
+                    "phpunit/phpunit": "3.7.*"
+                },
+                "time": "2014-08-24 17:44:41",
+                "type": "composer-installer",
+                "extra": {
+                    "class": "QafooLabs\\Composer\\AnsibleInstaller"
+                },
+                "autoload": {
+                    "psr-0": {
+                        "QafooLabs\\Composer\\": "src/"
+                    }
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Kyle Robinson Young",
+                        "email": "kyle@dontkry.com",
+                        "homepage": "https://github.com/shama"
+                    },
+                    {
+                        "name": "Jakob Westhoff",
+                        "email": "jakob@qafoo.com",
+                        "homepage": "https://github.com/jakobwesthoff"
+                    },
+                    {
+                        "name": "Benjamin Eberlei",
+                        "email": "benjamin@qafoo.com",
+                        "homepage": "https://github.com/beberlei"
+                    }
+                ],
+                "description": "Installer for ansible roles",
+                "keywords": [
+                    "ansible",
+                    "installer"
+                ],
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/installer/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/installer/issues"
+                }
+            },
+            "dev-master": {
+                "name": "qafoogalaxy/installer",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/installer.git",
+                    "reference": "966e83aa717cee710bd3c06f2191dccfc67f8c6e"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/installer/zipball/966e83aa717cee710bd3c06f2191dccfc67f8c6e",
+                    "reference": "966e83aa717cee710bd3c06f2191dccfc67f8c6e",
+                    "shasum": ""
+                },
+                "require-dev": {
+                    "composer/composer": "1.0.*@dev",
+                    "phpunit/phpunit": "3.7.*"
+                },
+                "time": "2014-08-24 17:44:41",
+                "type": "composer-installer",
+                "extra": {
+                    "class": "QafooLabs\\Composer\\AnsibleInstaller"
+                },
+                "autoload": {
+                    "psr-0": {
+                        "QafooLabs\\Composer\\": "src/"
+                    }
+                },
+                "license": [
+                    "MIT"
+                ],
+                "authors": [
+                    {
+                        "name": "Kyle Robinson Young",
+                        "email": "kyle@dontkry.com",
+                        "homepage": "https://github.com/shama"
+                    },
+                    {
+                        "name": "Jakob Westhoff",
+                        "email": "jakob@qafoo.com",
+                        "homepage": "https://github.com/jakobwesthoff"
+                    },
+                    {
+                        "name": "Benjamin Eberlei",
+                        "email": "benjamin@qafoo.com",
+                        "homepage": "https://github.com/beberlei"
+                    }
+                ],
+                "description": "Installer for ansible roles",
+                "keywords": [
+                    "ansible",
+                    "installer"
+                ],
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/installer/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/installer/issues"
+                }
+            }
+        },
+        "qafoogalaxy/Java": {
+            "dev-master": {
+                "name": "qafoogalaxy/Java",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/Java.git",
+                    "reference": "3b7da4f3d54103f2e5eaee5cd8473b381b8176da"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/Java/zipball/3b7da4f3d54103f2e5eaee5cd8473b381b8176da",
+                    "reference": "3b7da4f3d54103f2e5eaee5cd8473b381b8176da",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "1.0"
+                },
+                "time": "2014-09-20 10:09:33",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/Java/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/Java/issues"
+                }
+            }
+        },
+        "qafoogalaxy/Spidermonkey": {
+            "dev-master": {
+                "name": "qafoogalaxy/Spidermonkey",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/Spidermonkey.git",
+                    "reference": "3019902227e7ac2508413685ce04cfa9d1b7452b"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/Spidermonkey/zipball/3019902227e7ac2508413685ce04cfa9d1b7452b",
+                    "reference": "3019902227e7ac2508413685ce04cfa9d1b7452b",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "1.0"
+                },
+                "time": "2014-09-20 10:33:44",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/Spidermonkey/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/Spidermonkey/issues"
+                }
+            }
+        },
+        "qafoogalaxy/XAuth": {
+            "dev-master": {
+                "name": "qafoogalaxy/XAuth",
+                "version": "dev-master",
+                "version_normalized": "9999999-dev",
+                "source": {
+                    "type": "git",
+                    "url": "https://github.com/QafooGalaxy/XAuth.git",
+                    "reference": "21a183c8cf2c525a16a85786831ba1ae10f8b6c5"
+                },
+                "dist": {
+                    "type": "zip",
+                    "url": "https://api.github.com/repos/QafooGalaxy/XAuth/zipball/21a183c8cf2c525a16a85786831ba1ae10f8b6c5",
+                    "reference": "21a183c8cf2c525a16a85786831ba1ae10f8b6c5",
+                    "shasum": ""
+                },
+                "require": {
+                    "qafoogalaxy/installer": "1.0"
+                },
+                "time": "2014-09-20 10:35:34",
+                "type": "ansible-role",
+                "support": {
+                    "source": "https://github.com/QafooGalaxy/XAuth/tree/master",
+                    "issues": "https://github.com/QafooGalaxy/XAuth/issues"
+                }
+            }
+        }
+    }
+}
