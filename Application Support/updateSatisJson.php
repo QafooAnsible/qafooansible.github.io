@@ -1,6 +1,7 @@
 <?php
 $blacklist = array(
-    "QafooGalaxy/qafoogalaxy.github.io" => true
+    "QafooGalaxy/qafoogalaxy.github.io" => true,
+    "QafooGalaxy/BootstrapRole" => true
 );
 
 $githubUrl = "https://api.github.com/orgs/QafooGalaxy/repos";
