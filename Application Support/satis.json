@@ -65,6 +65,10 @@
         "17": {
             "type": "vcs",
             "url": "https:\/\/github.com\/QafooGalaxy\/XAuth"
+        },
+        "18": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/BuildEnvironment"
         }
     },
     "require-all": true,
