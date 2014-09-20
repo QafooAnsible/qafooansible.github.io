@@ -1,16 +1,72 @@
 {
     "name": "QafooAnsible",
     "homepage": "http:\/\/qafoogalaxy.github.io",
-    "repositories": [
-        {
+    "repositories": {
+        "0": {
             "type": "vcs",
             "url": "https:\/\/github.com\/QafooGalaxy\/installer"
         },
-        {
+        "1": {
             "type": "vcs",
-            "url": "https:\/\/github.com\/QafooGalaxy\/git"
+            "url": "https:\/\/github.com\/QafooGalaxy\/Git"
+        },
+        "4": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/BashEnvironment"
+        },
+        "5": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/BootstrapJS"
+        },
+        "6": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/CMake"
+        },
+        "7": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/CouchDB"
+        },
+        "8": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/Elasticsearch"
+        },
+        "9": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/Emscripten"
+        },
+        "10": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/Erlang"
+        },
+        "11": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/GtkTheme"
+        },
+        "12": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/HttpCli"
+        },
+        "13": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/ICU"
+        },
+        "14": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/Inkscape"
+        },
+        "15": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/Java"
+        },
+        "16": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/Spidermonkey"
+        },
+        "17": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/XAuth"
         }
-    ],
+    },
     "require-all": true,
     "twig-template": "template\/index.html.twig"
 }
