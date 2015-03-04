@@ -69,6 +69,34 @@
         "18": {
             "type": "vcs",
             "url": "https:\/\/github.com\/QafooGalaxy\/BuildEnvironment"
+        },
+        "19": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/foorge.base"
+        },
+        "20": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/foorge.nginx"
+        },
+        "21": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/foorge.consul"
+        },
+        "22": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/foorge.php"
+        },
+        "23": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/foorge.mysql"
+        },
+        "24": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/foorge.beanstalk"
+        },
+        "25": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/foorge.couchdb"
         }
     },
     "require-all": true,
