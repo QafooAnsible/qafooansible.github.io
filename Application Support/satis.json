@@ -97,6 +97,18 @@
         "25": {
             "type": "vcs",
             "url": "https:\/\/github.com\/QafooGalaxy\/foorge.couchdb"
+        },
+        "26": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/foorge.memcache"
+        },
+        "27": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/foorge.elasticsearch"
+        },
+        "28": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/foorge.nodejs"
         }
     },
     "require-all": true,
