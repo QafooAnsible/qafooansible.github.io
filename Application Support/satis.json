@@ -109,6 +109,10 @@
         "28": {
             "type": "vcs",
             "url": "https:\/\/github.com\/QafooGalaxy\/foorge.nodejs"
+        },
+        "29": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/foorge.loadbalancer"
         }
     },
     "require-all": true,
