@@ -45,7 +45,6 @@ $satisRepositories = array_map(function($repository) {
     );
 }, $repositories);
 
-
 $satisConfiguration = array(
     "name" => "QafooAnsible",
     "homepage" => "http://qafoogalaxy.github.io",
