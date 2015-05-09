@@ -113,6 +113,10 @@
         "29": {
             "type": "vcs",
             "url": "https:\/\/github.com\/QafooGalaxy\/foorge.loadbalancer"
+        },
+        "30": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/QafooGalaxy\/foorge.runner"
         }
     },
     "require-all": true,

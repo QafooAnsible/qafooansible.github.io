@@ -4,37 +4,45 @@ $blacklist = array(
     "QafooGalaxy/BootstrapRole" => true
 );
 
-$githubUrl = "https://api.github.com/orgs/QafooGalaxy/repos";
+$githubUrl = "https://api.github.com/orgs/QafooGalaxy/repos?page=";
 
-$responseBody = file_get_contents(
-    $githubUrl,
-    false,
-    stream_context_create(
-        array(
-            "http" => array(
-                "method" => "GET",
-                "header" => array(
-                    "Accept: application/vnd.github.v3+json",
-                    "User-Agent: QafooGalaxy Satis Updater"
+$foundRepositories = array();
+$page = 1;
+do {
+    $responseBody = file_get_contents(
+        $githubUrl . $page,
+        false,
+        stream_context_create(
+            array(
+                "http" => array(
+                    "method" => "GET",
+                    "header" => array(
+                        "Accept: application/vnd.github.v3+json",
+                        "User-Agent: QafooGalaxy Satis Updater"
+                    )
                 )
             )
         )
-    )
-);
+    );
 
-echo "Fetching repository list.\n";
+    echo "Fetching repository list.\n";
 
-if ($responseBody === false) {
-    throw new \RuntimeException("Could not fetch repository list from github");
-}
+    if ($responseBody === false) {
+        throw new \RuntimeException("Could not fetch repository list from github");
+    }
 
-$repositories = json_decode($responseBody, true);
+    $repositories = json_decode($responseBody, true);
 
-if ($repositories === null) {
-    throw new \RuntimeException("Retrieved JSON could not be decoded");
-}
+    if ($repositories === null) {
+        throw new \RuntimeException("Retrieved JSON could not be decoded");
+    }
 
-$repositories = array_filter($repositories, function($repository) use ($blacklist) {
+    $foundRepositories = array_merge($foundRepositories, $repositories);
+    $page++;
+
+} while(count($repositories));
+
+$foundRepositories = array_filter($foundRepositories, function($repository) use ($blacklist) {
     return array_key_exists($repository["full_name"], $blacklist) === false;
 });
 
@@ -43,7 +51,7 @@ $satisRepositories = array_map(function($repository) {
         "type" => "vcs",
         "url" => $repository["html_url"]
     );
-}, $repositories);
+}, $foundRepositories);
 
 $satisConfiguration = array(
     "name" => "QafooAnsible",
